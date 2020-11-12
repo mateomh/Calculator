@@ -1,12 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/app';
 import './styles.css';
 
-function Test() {
-  return <div>Hello World From React</div>;
-}
-
 ReactDOM.render(
-  <Test />,
+  <App />,
   document.getElementById('root'),
 );
