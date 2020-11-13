@@ -11,3 +11,33 @@ body {
   font-family: monospace;
   color: limegreen;
 }
+
+.button-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  height: 10vh;
+}
+
+.last-row {
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.button {
+  border: 1px solid grey;
+  font-weight: bolder;
+  font-size: 2.5vh;
+  padding: 3vh;
+}
+
+.type1 {
+  background-color: lightgray;
+}
+
+.type2 {
+  background-color: chocolate;
+}
+
+.type3 {
+  background-color: darkgray;
+}
