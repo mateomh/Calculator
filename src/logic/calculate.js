@@ -8,7 +8,7 @@ export default function calculate(calculatorObj, buttonName) {
     case '+':
     case '-':
     case '/':
-    case '*':
+    case 'X':
     case '=':
       if (total !== null) {
         total = operate(total, next, operation);

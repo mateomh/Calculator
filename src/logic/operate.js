@@ -11,7 +11,7 @@ export default function operate(numberOne, numberTwo, operation) {
     case '-':
       result = number1 - number2;
       break;
-    case '*':
+    case 'X':
       result = number1 * number2;
       break;
     case '/':
