@@ -17,6 +17,8 @@ export default function calculate(calculatorObj, buttonName) {
         } else {
           operation = buttonName;
         }
+      } else if (total !== '' && next === '') {
+        operation = buttonName;
       } else {
         total = next;
         next = '';
