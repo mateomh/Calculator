@@ -22,6 +22,7 @@ export default function calculate(calculatorObj, buttonName) {
       break;
     case '%':
       total = operate(next, 100, '/');
+      next = null;
       break;
     case 'AC':
       total = null;
