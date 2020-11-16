@@ -16,7 +16,7 @@ export default class App extends React.Component {
   }
 
   handleClick(event) {
-    const { value: buttonValue } = event.target
+    const { value: buttonValue } = event.target;
     const newState = calculate(this.state, buttonValue);
     this.setState(newState);
     console.log(newState);
@@ -25,10 +25,10 @@ export default class App extends React.Component {
   render() {
     const { total, next } = this.state;
     return (
-      <React.Fragment>
-        <Display result={total ==='' ? next : total}/>
+      <>
+        <Display result={total === '' ? next === '' ? undefined : next : total} />
         <Panel clickHandler={this.handleClick} />
-      </React.Fragment>
+      </>
     );
   }
 }
