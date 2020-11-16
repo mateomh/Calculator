@@ -1,8 +1,7 @@
 import operate from './operate';
 
 export default function calculate(calculatorObj, buttonName) {
-  let { next, total } = calculatorObj;
-  const { operation } = calculatorObj;
+  let { next, total, operation } = calculatorObj;
 
   switch (buttonName) {
     case '+':
@@ -10,18 +9,19 @@ export default function calculate(calculatorObj, buttonName) {
     case '/':
     case 'X':
     case '=':
-      if (total !== '') {
+      if (next !== '') {
         total = operate(total, next, operation);
       } else {
-        total = next;
-        next = '';
+        next = total;
+        total = '';
+        operation = buttonName;
       }
       break;
     case '+/-':
-      next = operate(next, -1, '*');
+      total = operate(total, -1, '*');
       break;
     case '%':
-      total = operate(null, next, '%');
+      total = operate(null, total, '%');
       next = '';
       break;
     case 'AC':
@@ -29,7 +29,7 @@ export default function calculate(calculatorObj, buttonName) {
       next = '';
       break;
     default:
-      next += buttonName;
+      total += buttonName;
       break;
   }
 
