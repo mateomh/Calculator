@@ -26,7 +26,7 @@ export default class App extends React.Component {
     const { total, next } = this.state;
     return (
       <>
-        <Display result={total === '' ? next === '' ? undefined : next : total} />
+        <Display result={next === '' ? total === '' ? undefined : total : next} />
         <Panel clickHandler={this.handleClick} />
       </>
     );

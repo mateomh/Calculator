@@ -9,20 +9,25 @@ export default function calculate(calculatorObj, buttonName) {
     case '/':
     case 'X':
     case '=':
-      if (next !== '') {
-        total = operate(next, total, operation);
+      if (total !== '' && next !== '') {
+        total = operate(total, next, operation);
         next = '';
+        if (buttonName === '=') {
+          operation = '';
+        } else {
+          operation = buttonName;
+        }
       } else {
-        next = total;
-        total = '';
+        total = next;
+        next = '';
         operation = buttonName;
       }
       break;
     case '+/-':
-      total = operate(total, -1, 'X');
+      next = operate(next, -1, 'X');
       break;
     case '%':
-      total = operate(total, 0, '%');
+      total = operate(next, 0, '%');
       next = '';
       break;
     case 'AC':
@@ -31,10 +36,10 @@ export default function calculate(calculatorObj, buttonName) {
       operation = '';
       break;
     default:
-      if (buttonName === '.' && total.includes('.')) {
+      if (buttonName === '.' && next.includes('.')) {
         break;
       }
-      total += buttonName;
+      next += buttonName;
   }
 
   return { next, total, operation };
