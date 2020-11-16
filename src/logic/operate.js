@@ -23,5 +23,5 @@ export default function operate(numberOne, numberTwo, operation) {
     default:
   }
 
-  return result;
+  return toString(result);
 }

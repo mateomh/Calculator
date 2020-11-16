@@ -18,7 +18,7 @@ export default function calculate(calculatorObj, buttonName) {
       }
       break;
     case '+/-':
-      next = toString(operate(next, -1, '*'));
+      next = operate(next, -1, '*');
       break;
     case '%':
       total = operate(null, next, '%');
