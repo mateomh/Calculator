@@ -17,6 +17,9 @@ export default function operate(numberOne, numberTwo, operation) {
     case '/':
       result = number1 / number2;
       break;
+    case '%':
+      result = number2 / 100.0;
+      break;
     default:
   }
 

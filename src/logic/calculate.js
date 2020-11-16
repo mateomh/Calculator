@@ -11,7 +11,7 @@ export default function calculate(calculatorObj, buttonName) {
     case '*':
     case '=':
       if (total !== null) {
-        operate(total, next, operation);
+        total = operate(total, next, operation);
       } else {
         total = next;
         next = null;
@@ -21,7 +21,7 @@ export default function calculate(calculatorObj, buttonName) {
       next = toString(operate(next, -1, '*'));
       break;
     case '%':
-      total = operate(next, 100, '/');
+      total = operate(null, next, '%');
       next = null;
       break;
     case 'AC':
