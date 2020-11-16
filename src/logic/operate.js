@@ -18,7 +18,7 @@ export default function operate(numberOne, numberTwo, operation) {
       result = number1.div(number2);
       break;
     case '%':
-      result = number2.div(100.0);
+      result = number1.div(100.0);
       break;
     default:
   }

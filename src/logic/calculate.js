@@ -10,7 +10,8 @@ export default function calculate(calculatorObj, buttonName) {
     case 'X':
     case '=':
       if (next !== '') {
-        total = operate(total, next, operation);
+        total = operate(next, total, operation);
+        next = '';
       } else {
         next = total;
         total = '';
@@ -21,12 +22,13 @@ export default function calculate(calculatorObj, buttonName) {
       total = operate(total, -1, 'X');
       break;
     case '%':
-      total = operate(null, total, '%');
+      total = operate(total, 0, '%');
       next = '';
       break;
     case 'AC':
       total = '';
       next = '';
+      operation = '';
       break;
     default:
       total += buttonName;
