@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import Display from './display';
 import Panel from './panel';

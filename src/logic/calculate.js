@@ -27,8 +27,10 @@ export default function calculate(calculatorObj, buttonName) {
       next = operate(next, -1, 'X');
       break;
     case '%':
-      total = operate(next, 0, '%');
-      next = '';
+      if (next !== '') {
+        total = operate(next, 0, '%');
+        next = '';
+      }
       break;
     case 'AC':
       total = '';
