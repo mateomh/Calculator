@@ -15,6 +15,9 @@ export default function operate(numberOne, numberTwo, operation) {
       result = number1.times(number2);
       break;
     case '/':
+      if (number2.eq(0.0)) {
+        return 'MathError';
+      }
       result = number1.div(number2);
       break;
     case '%':

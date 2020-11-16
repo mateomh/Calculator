@@ -3,6 +3,10 @@ import operate from './operate';
 export default function calculate(calculatorObj, buttonName) {
   let { next, total, operation } = calculatorObj;
 
+  if (total === 'MathError') {
+    total = '';
+  }
+
   switch (buttonName) {
     case '+':
     case '-':
