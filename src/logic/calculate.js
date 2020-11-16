@@ -31,8 +31,10 @@ export default function calculate(calculatorObj, buttonName) {
       operation = '';
       break;
     default:
+      if (buttonName === '.' && total.includes('.')) {
+        break;
+      }
       total += buttonName;
-      break;
   }
 
   return { next, total, operation };
