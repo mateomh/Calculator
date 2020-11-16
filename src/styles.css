@@ -16,7 +16,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: space-evenly;
-  height: 10vh;
+  height: 17vh;
 }
 
 .last-row {
