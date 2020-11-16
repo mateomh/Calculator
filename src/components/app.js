@@ -23,9 +23,10 @@ export default class App extends React.Component {
   }
 
   render() {
+    const { total, next } = this.state;
     return (
       <React.Fragment>
-        <Display />
+        <Display result={total ==='' ? next : total}/>
         <Panel clickHandler={this.handleClick} />
       </React.Fragment>
     );
