@@ -1,37 +1,36 @@
+import operate from './operate';
+
 export default function calculate(calculatorObj, buttonName) {
-  const resultObj = calculatorObj;
-  if (buttonName === '=') {
-    switch (calculatorObj.operator) {
-      case '+':
-        resultObj.total += resultObj.next;
-        break;
-      case '-':
-        console.log('resta');
-        resultObj.total -= resultObj.next;
-        break;
-      case 'X':
-        console.log('multiplicacion');
-        resultObj.total *= resultObj.next;
-        break;
-      case '/':
-        console.log('division');
-        resultObj.total /= resultObj.next;
-        break;
-      case '+/-':
-        console.log('mas menos');
-        resultObj.total += resultObj.next;
-        break;
-      case '%':
-        console.log('porcentaje');
-        break;
-      default:
-    }
-  } else if (buttonName === '+/-') {
-    resultObj.total *= -1;
-    resultObj.next *= -1;
-  } else {
-    resultObj.total = resultObj.next;
-    resultObj.next = 0;
+  let { next, total } = calculatorObj;
+  const { operation } = calculatorObj;
+
+  switch (buttonName) {
+    case '+':
+    case '-':
+    case '/':
+    case '*':
+    case '=':
+      if (total !== null) {
+        operate(total, next, operation);
+      } else {
+        total = next;
+        next = null;
+      }
+      break;
+    case '+/-':
+      next = toString(operate(next, -1, '*'));
+      break;
+    case '%':
+      total = operate(next, 100, '/');
+      break;
+    case 'AC':
+      total = null;
+      next = null;
+      break;
+    default:
+      next += buttonName;
+      break;
   }
-  return resultObj;
+
+  return { next, total, operation };
 }
