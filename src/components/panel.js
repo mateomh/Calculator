@@ -1,10 +1,11 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import ButtonKey from './button';
 
 export default function Panel(props) {
   const { clickHandler } = props;
   return (
-    <fragment>
+    <>
       <div className="button-row">
         <ButtonKey value="AC" type="button type3" clickCallBack={clickHandler} />
         <ButtonKey value="+/-" type="button type3" clickCallBack={clickHandler} />
@@ -18,10 +19,10 @@ export default function Panel(props) {
         <ButtonKey value="X" type="button type2" clickCallBack={clickHandler} />
       </div>
       <div className="button-row">
-        <ButtonKey value="4" type="button type1" />
-        <ButtonKey value="5" type="button type1" />
-        <ButtonKey value="6" type="button type1" />
-        <ButtonKey value="-" type="button type2" />
+        <ButtonKey value="4" type="button type1" clickCallBack={clickHandler} />
+        <ButtonKey value="5" type="button type1" clickCallBack={clickHandler} />
+        <ButtonKey value="6" type="button type1" clickCallBack={clickHandler} />
+        <ButtonKey value="-" type="button type2" clickCallBack={clickHandler} />
       </div>
       <div className="button-row">
         <ButtonKey value="1" type="button type1" clickCallBack={clickHandler} />
@@ -34,7 +35,7 @@ export default function Panel(props) {
         <ButtonKey value="." type="button type1" clickCallBack={clickHandler} />
         <ButtonKey value="=" type="button type2" clickCallBack={clickHandler} />
       </div>
-    </fragment>
+    </>
   );
 }
 

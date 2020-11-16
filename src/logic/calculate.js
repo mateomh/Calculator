@@ -10,11 +10,11 @@ export default function calculate(calculatorObj, buttonName) {
     case '/':
     case 'X':
     case '=':
-      if (total !== null) {
+      if (total !== '') {
         total = operate(total, next, operation);
       } else {
         total = next;
-        next = null;
+        next = '';
       }
       break;
     case '+/-':
@@ -22,11 +22,11 @@ export default function calculate(calculatorObj, buttonName) {
       break;
     case '%':
       total = operate(null, next, '%');
-      next = null;
+      next = '';
       break;
     case 'AC':
-      total = null;
-      next = null;
+      total = '';
+      next = '';
       break;
     default:
       next += buttonName;
