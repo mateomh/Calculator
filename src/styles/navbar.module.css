@@ -1,0 +1,8 @@
+.navbar {
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  height: 10vh;
+}

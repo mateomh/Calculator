@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: space-evenly;
-  height: 17vh;
+  height: 16vh;
 }
 
 .lastRow {
