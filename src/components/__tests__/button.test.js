@@ -37,7 +37,7 @@ test('2. Button renders the value', () => {
   expect(buttons[0].textContent).toBe('9');
 });
 
-test('3. Default values for the props', () => {
+test('3. Types for the props', () => {
   expect(Button.propTypes.clickCallBack).toBe(PropTypes.func.isRequired);
   expect(Button.propTypes.value).toBe(PropTypes.string.isRequired);
   expect(Button.propTypes.type).toBe(PropTypes.string.isRequired);
