@@ -5,4 +5,5 @@
   align-items: center;
   text-align: center;
   height: 10vh;
+  border: 0.5vh solid black;
 }

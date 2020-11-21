@@ -3,7 +3,6 @@ import { useState } from 'react';
 import calculate from '../logic/calculate';
 import Display from './display';
 import Panel from './panel';
-import NavBar from './navbar';
 
 const App = () => {
   const [state, setState] = useState({
@@ -21,7 +20,6 @@ const App = () => {
 
   return (
     <>
-      <NavBar />
       <Display result={next === '' ? total === '' ? undefined : total : next} />
       <Panel clickHandler={handleClick} />
     </>
