@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/app';
-import './styles.css';
+import Routes from './routes';
+import NavBar from './components/navbar';
+import './styles/general-styles.css';
 
 ReactDOM.render(
-  <App />,
+  <React.StrictMode>
+    <NavBar />
+    <Routes />
+  </React.StrictMode>,
   document.getElementById('root'),
 );

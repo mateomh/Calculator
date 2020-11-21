@@ -1,25 +1,11 @@
-body {
-  background-color: darkseagreen;
-}
-
-.display {
-  background-color: black;
-  height: 5vh;
-  text-align: right;
-  font-size: 5vh;
-  padding: 1vh 3vh;
-  font-family: monospace;
-  color: limegreen;
-}
-
-.button-row {
+.buttonRow {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: space-evenly;
-  height: 17vh;
+  height: 16vh;
 }
 
-.last-row {
+.lastRow {
   grid-template-columns: 2fr 1fr 1fr;
 }
 
