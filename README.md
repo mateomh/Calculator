@@ -17,6 +17,20 @@ This project is a working calculator, the idea is to start using the concepts fr
 
 [Live Demo Link](https://calculator-matt.herokuapp.com/)
 
+### Running the test suite
+
+First you need to install all the dependencies for the project, to do this run
+
+> npm install
+
+This will get you all the necessary packages to run the tests.
+
+Then just run from the terminal inside the root folder for the project
+
+> npm test
+
+You are all set, the result should apper in the command line telling you how many tests and suites were made, and how long it took for each set of tests to run.
+
 
 ## Authors
 
