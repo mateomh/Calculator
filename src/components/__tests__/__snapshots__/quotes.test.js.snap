@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quotes component renders correctly 1`] = `
+<div>
+  <h1>
+    Quote
+  </h1>
+</div>
+`;
